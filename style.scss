@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,400&display=swap');
+
 // :root {
 //   --color-background-body: #333;
 //   --color-particle-fill: #ababab;
@@ -61,7 +66,7 @@ body {
 
 }
 
-.logo {
+.slogan {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -71,11 +76,27 @@ body {
   text-transform: uppercase;
 }
 
-.logo-svg * {
+.slogan-svg * {
   stroke-dasharray: 1000;
   stroke-width: 2;
   stroke: white;
   animation: dash 3s linear;
+}
+
+.slogan-text {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  font-size: 36px;
+  line-height: 140%;
+  max-width: 400px;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 100
+}
+
+.slogan-text span {
+  text-decoration: underline;
 }
 
 @keyframes dash {
@@ -176,4 +197,29 @@ body {
   &:focus {
     outline: 4px solid #fff;
   }
+}
+
+
+.head {
+  width: 100%;
+  padding: 0 40px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head-nav ul {
+  display: flex;
+}
+
+.head-nav ul li {
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin: 0 20px;
+  list-style: none
 }
