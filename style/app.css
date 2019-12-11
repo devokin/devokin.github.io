@@ -5,13 +5,13 @@
 :root {
   --color-background-body: #292727;
   --color-particle-fill: #1b1a1a;
-  --color-ring-stroke: #a0a0a08f;
+  --color-ring-stroke: #a0a0a075;
 }
 
 .theme-brad {
   --color-background-body: #f6f5de;
   --color-particle-fill: #be6701;
-  --color-ring-stroke: #110000;
+  --color-ring-stroke: #100;
 }
 
 * {
@@ -90,7 +90,8 @@ body {
 }
 
 .slogan-text span {
-  text-decoration: underline;
+  border-bottom: 1px solid #ffffff;
+  font-weight: 300;
 }
 
 @-webkit-keyframes dash {
@@ -367,4 +368,4 @@ body {
   margin: 0 20px;
   list-style: none;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=app.css.map */
