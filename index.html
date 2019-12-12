@@ -115,8 +115,12 @@
                 stroke="#2B2A2A" stroke-width="3" />
         </svg>
     </div>
-    <div class="slogan-text">
+    <!-- <div class="slogan-text">
         Development that saves your <span>time.</span>
+    </div> -->
+
+    <div id="demo" class="slogan-text">
+        <!-- Development that saves your <span>time.</span> -->
     </div>
 
     <form action="">
@@ -125,7 +129,20 @@
         <submit type="submit">
     </form>
 
-    <script src="./script.js">
+    <script>
+        var i = 0;
+        var txt = 'Development that saves your time.';
+        var speed = 40;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("demo").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        window.addEventListener('load', typeWriter);
     </script>
 </body>
 
