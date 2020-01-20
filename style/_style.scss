@@ -35,6 +35,8 @@ body {
   padding: 0;
   margin: 0;
   background-color: var(--color-background-body);
+  height: 100vh;
+  overflow: hidden;
 }
 
 .ring-wrapper {
@@ -46,8 +48,8 @@ body {
 
 .ring {
   overflow: hidden;
-  width: 120vh;
-  height: 120vh;
+  width: 100vh;
+  height: 100vh;
   border-radius: 50%;
   margin: 0;
   padding: 0;
