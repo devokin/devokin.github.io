@@ -1,0 +1,25 @@
+{
+  "name": "devokin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devokin/devokin.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devokin/devokin.github.io/issues"
+  },
+  "homepage": "https://github.com/devokin/devokin.github.io#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^6.5.0",
+    "axios": "^0.19.2",
+    "express": "^4.17.1"
+  }
+}
