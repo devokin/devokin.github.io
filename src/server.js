@@ -28,8 +28,8 @@ app.post('/api/subscribe', (req, res) => {
     console.log(err)
     return res.status(400).send(err);
   });
-  
-})
+
+});
 
 app.post('/api/add', (req, res) => {
 
@@ -42,7 +42,7 @@ app.post('/api/add', (req, res) => {
   //     "age": 25
   //   }
   // ]
-})
+});
 
 if (module === require.main) {
   const server = app.listen(process.env.PORT || 8080, () => {
