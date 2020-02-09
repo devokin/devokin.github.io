@@ -1,4 +1,6 @@
 .DS_Store
 sendgrid.env
 node_modules
-.env
+#.idea
+#.env
+dist
