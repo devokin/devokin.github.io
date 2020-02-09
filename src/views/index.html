@@ -15,9 +15,16 @@
     <h1> Test Form </h1>
 
     <form @submit.prevent="onSubmit">
-      <input v-model="email" type="email" name="email">
+
+      <input v-model="contact.firstName" type="text" name="email">
+      <input v-model="contact.lastName" type="text" name="email">
+      <input v-model="contact.email" type="text" name="email">
+      <textarea v-model="contact.message" id="" cols="30" rows="10"></textarea>
+
       <button>Send Email</button>
+
     </form>
+
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -29,11 +36,16 @@
     var app = new Vue({
       el: '#app',
       data: {
-        email: 'alexstudinskiy@i.ua'
+        contact: {
+          firstName: 'Alex',
+          lastName: 'Burykin',
+          email: 'alexstudinskiy@i.ua',
+          message: 'Hey, i have a project :D'
+        }
       },
       methods: {
         onSubmit() {
-          axios.post('/api/subscribe', { email: this.email }).then(res => {
+          axios.post('/api/subscribe', { contact: this.contact }).then(res => {
             console.log(res);
           }).catch(err => {
             console.log(err);

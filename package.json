@@ -5,8 +5,9 @@
   "main": "script.js",
   "scripts": {
     "build": "tsc",
-    "start": "node src/server.js",
-    "serve": "ts-node-dev --respawn src/index.ts"
+    "start": "tsc && node dist/index.js",
+    "serve": "ts-node-dev --respawn src/index.ts",
+    "copy-assets": "ts-node tools/copyAssets"
   },
   "repository": {
     "type": "git",

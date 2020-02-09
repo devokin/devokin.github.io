@@ -4,9 +4,6 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 sgClient.setApiKey(process.env.SENDGRID_API_KEY || '');
-console.log(process.env.SENDGRID_API_KEY);
-console.log(process.env.SENDGRID_LANDING_SUBSCRIBE_LIST_ID);
-
 
 export const sgSubscribe = async (contact: ISgContact) => {
 

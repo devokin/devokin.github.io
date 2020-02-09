@@ -9,22 +9,23 @@ app.get('/', (req, res) => {
 
 app.post('/api/subscribe', async (req, res) => {
 
-    const contact: ISgContact = {
-        email: 'alexstudinskiy@i.ua',
-        firstName: 'Alex',
-        lastName: 'Studinskiy',
-        message: 'Hey my project is awesome'
-    };
+    console.log(req.body);
+    console.log(req);
+    // const contact: ISgContact = {
+    //     email: 'alexstudinskiy@i.ua',
+    //     firstName: 'Alex',
+    //     lastName: 'Studinskiy',
+    //     message: 'Hey my project is awesome'
+    // };
 
-    try {
-        let result = await sgSubscribe(contact);
-        return res.status(200).send(result);
-    } catch(err) {
-        return res.status(400).send(err)
-    }
+    // try {
+    //     let result = await sgSubscribe(contact);
+    //     return res.status(200).send(result);
+    // } catch(err) {
+    //     return res.status(400).send(err)
+    // }
 
 });
-
 
 app.listen(process.env.PORT || 8080, () => {
     console.log(`App listening on port 8080`);
