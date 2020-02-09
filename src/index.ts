@@ -1,29 +1,27 @@
 import express from 'express';
-import { ISgContact, sgSubscribe } from './helpers/sgSubscribe';
+import { sgSubscribe } from './helpers/sgSubscribe';
 
 const app = express();
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.static(__dirname + '/static'));
 
 app.get('/', (req, res) => {
     res.status(200).sendFile(__dirname + '/views/index.html');
 });
 
+app.get('/test', (req, res) => {
+    res.status(200).sendFile(__dirname + '/views/test.html');
+});
+
 app.post('/api/subscribe', async (req, res) => {
 
-    console.log(req.body);
-    console.log(req);
-    // const contact: ISgContact = {
-    //     email: 'alexstudinskiy@i.ua',
-    //     firstName: 'Alex',
-    //     lastName: 'Studinskiy',
-    //     message: 'Hey my project is awesome'
-    // };
-
-    // try {
-    //     let result = await sgSubscribe(contact);
-    //     return res.status(200).send(result);
-    // } catch(err) {
-    //     return res.status(400).send(err)
-    // }
+    try {
+        let result = await sgSubscribe(req.body.contact);
+        return res.status(200).send(result);
+    } catch(err) {
+        return res.status(400).send(err)
+    }
 
 });
 

@@ -6,8 +6,6 @@ dotenv.config();
 sgClient.setApiKey(process.env.SENDGRID_API_KEY || '');
 
 export const sgSubscribe = async (contact: ISgContact) => {
-
-  console.log(contact);
   return sgClient.request({
     method: 'PUT',
     url: '/v3/marketing/contacts',

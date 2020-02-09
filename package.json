@@ -4,10 +4,11 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "build": "tsc",
-    "start": "tsc && node dist/index.js",
-    "serve": "ts-node-dev --respawn src/index.ts",
-    "copy-assets": "ts-node tools/copyAssets"
+    "copyViews": "cp -r src/views/ dist/views",
+    "buildSass": "node-sass src/static/style/app.sass -o dist/static/style/",
+    "build": "tsc && npm run buildSass && npm run copyViews",
+    "start": "npm run build && node dist/index.js",
+    "serve": "ts-node-dev --respawn src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,8 @@
     "@sendgrid/client": "^6.5.2",
     "@sendgrid/mail": "^6.5.0",
     "axios": "^0.19.2",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-sass": "^4.13.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.2",
