@@ -1,11 +1,11 @@
-import sgClient from '@sendgrid/client';
+import * as sgClient from '@sendgrid/client';
 import * as dotenv from 'dotenv';
 
 dotenv.config();
 
 sgClient.setApiKey(process.env.SENDGRID_API_KEY || '');
 
-export const sgSubscribe = async (contact: ISgContact) => {
+const sgSubscribe = async (contact: ISgContact) => {
   return sgClient.request({
     method: 'PUT',
     url: '/v3/marketing/contacts',
@@ -31,3 +31,5 @@ export interface ISgContact {
   lastName: string
   message: string;
 }
+
+export default sgSubscribe;
