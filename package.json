@@ -4,11 +4,11 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "copyViews": "cp -r src/views/ dist/views",
-    "buildSass": "npx node-sass src/static/style/app.sass -o dist/static/style/",
+    "copyViews": "cp -r src/views/ dist/src/views",
+    "buildSass": "npx node-sass src/static/style/app.sass -o dist/src/static/style/",
     "build": "npx tsc && npm run buildSass && npm run copyViews",
-    "gcp-build": "tsc",
-    "start": "npm run build && node dist/index.js",
+    "start": "node dist/src/index.js",
+    "deploy": "gcloud app deploy",
     "serve": "ts-node-dev --respawn src/index.ts"
   },
   "repository": {
@@ -25,15 +25,18 @@
     "@sendgrid/client": "^6.4.0",
     "@sendgrid/mail": "^6.4.0",
     "axios": "^0.19.2",
+    "bulma": "^0.8.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "node-sass": "^4.13.1",
+    "shelljs": "^0.8.3",
     "typescript": "^3.7.5"
   },
   "devDependencies": {
-    "ts-node-dev": "^1.0.0-pre.44",
     "@types/express": "^4.17.2",
     "@types/node": "^13.7.0",
-    "dotenv": "^8.2.0"
+    "@types/shelljs": "^0.8.6",
+    "ts-node-dev": "^1.0.0-pre.44"
   },
   "engines": {
     "node": ">=10",

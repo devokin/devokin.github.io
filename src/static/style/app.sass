@@ -2,11 +2,20 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap')
 @import url('https://fonts.googleapis.com/css?family=Merriweather:300&display=swap')
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,400&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap')
+
+$turquoise: #AAF0D1
+$link: $turquoise
+$family-sans-serif: "Open Sans", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+@charset "utf-8"
+@import '../../../node_modules/bulma/bulma.sass'
 
 $white: #ffffff
 // $color-stroke: #a0a0a0
 $color-stroke: #a0a0a075
+$light-gray: #a0a0a0
 
+$playfair: 'Playfair Display', serif
 
 \:root
   --color-background-body: #292727
@@ -25,6 +34,8 @@ body
   padding: 0
   margin: 0
   background-color: var(--color-background-body)
+
+.home
   height: 100vh
   overflow: hidden
 
@@ -171,3 +182,39 @@ body
     font-size: 14px
     margin: 0 20px
     list-style: none
+
+.contact-us
+  width: 100%
+  max-width: 460px
+  padding: 60px 0
+  margin: 0 auto
+  .button
+    margin: 20px 0
+    padding: 0 40px
+    color: $white
+    font-weight: 300
+    text-transform: uppercase
+    background-color: transparent
+    transition: .5s all
+    border-color: $turquoise
+
+.label
+  color: $turquoise
+  font-weight: 300
+  letter-spacing: .3px
+
+.input, .textarea
+  background-color: transparent
+  border-color: $light-gray
+  color: $white
+  transition: .5s all
+  // width: 100%
+  &::placeholder
+    color: $light-gray
+
+.title
+  font-size: 46px
+  margin-top: 140px
+  color: $white
+  font-family: $playfair
+  text-align: center
