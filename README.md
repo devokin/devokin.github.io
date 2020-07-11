@@ -1,3 +1,5 @@
 ### Devokin
 
-## To deploy any changes run `npm run deploy` in project folder
+## To deploy any changes run in project folder
+- `npm run build`
+- `npm run deploy` 
