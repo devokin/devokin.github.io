@@ -13,9 +13,9 @@ app.get('/', (req: Request, res: Response) => {
     res.status(200).sendFile(__dirname + '/views/index.html');
 });
 
-app.get('/test', (req: Request, res: Response) => {
-    res.status(200).sendFile(__dirname + '/views/test.html');
-});
+// app.get('/test', (req: Request, res: Response) => {
+//     res.status(200).sendFile(__dirname + '/views/test.html');
+// });
 
 app.post('/api/subscribe', async (req: Request, res: Response) => {
 
